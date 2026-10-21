@@ -1,0 +1,17 @@
+quarkus.http.port=8083
+
+quarkus.datasource.db-kind=postgresql
+quarkus.datasource.username=postgres
+quarkus.datasource.password=${QUARKUS_DATASOURCE_PASSWORD}
+quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/item_db
+
+quarkus.hibernate-orm.schema-management.strategy=update
+quarkus.hibernate-orm.log.sql=true
+
+kafka.bootstrap.servers=localhost:9092
+
+mp.messaging.incoming.order-created.connector=smallrye-kafka
+mp.messaging.incoming.order-created.topic=order-created
+mp.messaging.incoming.order-created.group.id=item-service
+mp.messaging.incoming.order-created.auto.offset.reset=earliest
+mp.messaging.incoming.order-created.value.deserializer=org.apache.kafka.common.serialization.StringDeserializer

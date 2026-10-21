@@ -1,0 +1,25 @@
+# Build output
+**/target/
+**/build/
+**/.gradle/
+
+# Local configuration and credentials
+**/src/main/resources/application.properties
+**/src/main/resources/application-local.properties
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE files
+.vscode/
+**/.vscode/
+.idea/
+*.iml
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
